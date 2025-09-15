@@ -40,6 +40,32 @@ a:hover {text-decoration: underline;}
 /*-------COMMON VARIABLES-----------*/
 
 
+/*--- Theme editiing section ----*/
+.light-theme {
+  --bg: #f9fafbf6;
+  --panel: #ffffff;
+  --text: #1e293b;
+  --muted: #475569;
+  --brand: #2563eb;
+  --brand-dark: #1e40af;
+}
+
+body, nav, ul, li, section, .container, .card .skills-list, .btn, .site-header{
+    background-color: var(--panel);
+    color: var(--text);
+}
+
+button , a{
+    color: var(--text);
+}
+
+body.light-theme .site-header {
+  background: var(--panel);
+}
+
+
+/*--- Theme editiing section ----*/
+
 .logo {
     font-size: 1.7rem;
     color: var(--brand);
@@ -74,36 +100,35 @@ a:hover {text-decoration: underline;}
 .btn-outline:hover {
     background-color: rgba(34, 211, 238, .08);
 }
+.theme-btn, .about-btn{
+    margin-left: 12px;
+    border-radius: 6px;
+    padding: .7rem 1rem;
+    font-size:12px;
+    background-color: var(--bg);
+    border-color: var(--bg);
+}
+
+
 
 /*NAVBAR*/
-nav {
-    padding: 12px;
-    margin: .25rem;
-    background-color: #001018;
-}
-nav ul {
-    display: flex;
-    justify-content: space-around;
-}
-nav ul li {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
 .site-header {
+    width: 100%;
+    background: var(--panel);
+    border-bottom: 1px solid var(--brand);
     position: sticky;
     top: 0;
     backdrop-filter: blur(8px);
-    background: rgba(11, 18, 33, 7);
-    border-bottom: 1px solid #1f2937;
-    margin-bottom: 12px;
+    padding: .45rem;
 }
+
 .site-header .container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: .8rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .8rem 1rem;
 }
 .logo {
     font-size: 1.1rem;
@@ -117,15 +142,23 @@ nav ul li {
     margin: 0;
     padding: 0;
 }
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li {
+    font-size: 20px;
+    font-weight: bold;
+}
 .nav a {
     padding: .4rem .6rem;
     border-radius: 8px;
 }
-.nav a:focus,
 .nav a:hover {
-    background: #0b1220;
-    outline: 2px solid transparent;
+    font-size:21px;
+    transition: 0.5s ease;
 }
+
 
 
 .hero {
@@ -155,6 +188,7 @@ nav ul li {
     font-size: 20px;
 }
 
+
 .profile-picture {
     display: flex;
     justify-content: flex-end; 
@@ -164,6 +198,8 @@ nav ul li {
     width: 320px;            
     height: auto;
 }
+
+
 
 .cards {
     display: grid;
@@ -191,13 +227,13 @@ nav ul li {
     justify-content: space-between;
     min-height: 150px; 
 }
-
 .card img {
     width: 100%;
     height: 200px;             
     object-fit: cover;         
     border-bottom: 1px solid #1f2937;
 }
+
 
 
 .skills-list {
@@ -209,7 +245,7 @@ nav ul li {
     justify-content: center;
 }
 .skills-list li {
-    background: #1e293b;
+    
     padding: .8rem 1.4rem;
     border-radius: 999px;
     border: 1px solid var(--brand);
@@ -218,11 +254,14 @@ nav ul li {
     cursor: pointer;
 }
 
+
+
 /*----Transistion puroses----*/
 .html:hover{background-color: #f06529; transition: 0.3s; box-shadow: var(--shadow);}
 .css:hover{background-color: #2965f1; transition: 0.3s; box-shadow: var(--shadow);}
 .networking:hover{background-color: #9629f06b; transition: 0.3s; box-shadow: var(--shadow);}
 .game:hover{background-color: #047952; transition: 0.3s; box-shadow: var(--shadow);}
+
 
 
 .chips {
@@ -239,6 +278,7 @@ nav ul li {
     border: 1px solid #1f2937;
     border-radius: 999px;
 }
+
 
 
 .site-footer {
