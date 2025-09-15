@@ -16,19 +16,20 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <button id="theme" class="theme-btn">🌙</button>
             </ul>
         </nav>
     </div>
-</header>
+    </header>
 
     <main id="content">
         <section class="hero" aria-labelledby="intro-title">
             <div class="container">
                 <div class="hero-grid">
                     <div>
-                        <h1 class="intro-title">Hi, my name is Stargie L. Oranda</h2>
+                        <h1 class="intro-title">Hi, my name is Stargie L. Oranda</h1>
                         <p>I am a starring Web developer with experience in Networking and Basic Hacking and Game Development</p>
-                        <a class="btn" href="#about-me">Lear More ></a>
+                        <a id="about-btn" class="btn" href="#about-me">Lear More ></a>
                     </div>
                     <figure class="profile-picture">
                         <img src="img/profile_picture.jpg" alt="my_profile_picture">
@@ -40,10 +41,11 @@
         <section id="about-me" aria-labelledby="about-title">
             <div class="container">
                 <h2 class="about-title">About</h2>
-                <p class="description">I am a begginer web developer, cyber security, and game developer. I create
+                <p id="about-text" class="description">I am a beginner web developer, cyber security, and game developer. I create
                     user friendly web browsers, find vulnerabiities, and game assets. I am currently mastering <strong>HTML, CSS, Networking, and Game modeling</strong> which are
                     fundamentals in my projects.You can reach me through <a href="#contact"><strong>Email</strong></a> or see my
                     projects on <a href="" target="_blank" rel="noopener"><strong>Github</strong></a>
+                    <button id="about-edit" class="about-btn">Edit</button>
                 </p>
             </div>
         </section>
@@ -110,6 +112,32 @@
     <footer class="site-footer">
         @<span id="year">2025</span>Stargie L. Oranda. Built with HTML, CSS
     </footer>
-
 </body>
+
+
+
+<script>
+const togglebtn = document.getElementById("theme");
+
+togglebtn.addEventListener("click",() => {
+    document.body.classList.toggle("light-theme");
+    togglebtn.textContent = document.body.classList.contains("light-theme") ? "🌑" : "🌙";
+})
+
+const editBtn = document.getElementById("about-edit");
+const aboutText = document.getElementById("about-text");
+
+editBtn.addEventListener("click", () => {
+    if(!aboutText.isContentEditable){
+        aboutText.contentEditable = "true";
+        aboutText.focus();
+        editBtn.textContent = "💾 Save";
+    }else{
+        aboutText.contentEditable = "false";
+        editBtn.textContent = "✏️ Edit";
+        alert("Changes saved!");
+    }
+});
+
+</script>
 </html>
