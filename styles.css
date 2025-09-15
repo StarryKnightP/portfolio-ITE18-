@@ -20,7 +20,7 @@ html {
     --space-4: 32px;
     --space-5: 48px;
     --space-6: 72px;
-    --maxw: 1000px;
+    --maxw: 1100px;
     --shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
@@ -303,4 +303,5 @@ nav ul li {
     }
 }
 /*-----MEDIA ADJUSTMENTS-------*/
+
 
